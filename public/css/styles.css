@@ -1,0 +1,128 @@
+html {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+#heading {
+  background-color: #0c4116; /* Dark green */
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 24px; /* Increase font size for better visibility */
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 15px;
+  transition: background-color 0.2s; /* Smooth color transition on hover */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.item:not(:last-child) {
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  appearance: none; /* Remove default appearance */
+  width: 15px;
+  height: 15px;
+  border: 2px solid #4d8056; /* Dark green border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: transparent;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s; /* Smooth size transition on hover */
+}
+
+/* Increase size on hover */
+input[type="checkbox"]:hover {
+  width: 20px; /* Increase width on hover */
+  height: 20px; /* Increase height on hover */
+}
+/* Style the checked checkbox */
+input[type="checkbox"]:checked {
+  background-color: #4d8056; /* Dark green when checked */
+}
+
+p {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+  flex-grow: 1;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 500;
+}
+.item p:hover {
+  font-size: 25px; /* Increase font size on hover */
+  transition: font-size 0.3s; /* Smooth size transition on hover */
+}
+
+form {
+  text-align: center;
+  margin: 0;
+}
+
+button[type="submit"] {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #416848; /* Dark green */
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+  margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0e2412; /* Darker green on hover */
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  width: 80%;
+}
+
+input[type="text"]:not(:last-child):hover {
+  outline: 2px solid #0c4116; /* Dark green outline on hover */
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+footer {
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
