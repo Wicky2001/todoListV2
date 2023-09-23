@@ -8,6 +8,8 @@ For example, to access a custom todo list, use this URL format:
 
 - Custom todo list: `https://jealous-red-school-uniform.cyclic.cloud/<custom-todo-list-name>`
 
+![Screenshot 1](screenShots\Screenshot3.png)
+
 The project allows you to add and remove items from your todo lists. It is built using various technologies such as Mongoose, MongoDB Atlas, JavaScript, Node.js, HTML, and CSS.
 
 ## Live Demo
@@ -40,8 +42,8 @@ You can explore the live demo of the project [here](https://jealous-red-school-u
 
 Here are some screenshots of the project:
 
-![Screenshot 1](link_to_image1)
-![Screenshot 2](link_to_image2)
+![Screenshot 2](screenShots\Screenshot1.png)
+![Screenshot 3](screenShots\Screenshot2.png)
 
 ## Getting Started
 
