@@ -1,5 +1,4 @@
-//jshint esversion:6
-//Document array
+const PORT = process.env.PORT || 3000;
 let items;
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -47,11 +46,7 @@ const CustomTodoList = mongoose.model(
   customTodoListSchema
 );
 
-const DefaultObj = [
-  { name: "Preapare breakfast" },
-  { name: "Watering flowers" },
-  { name: "Go to gym" },
-];
+const DefaultObj = [{ name: "Hello Welcome" }];
 // deleting and item
 async function deleteDocument(condition, model) {
   try {
@@ -90,11 +85,10 @@ app.get("/", async function (req, res) {
   await fetechItems(Item, {}, DefaultObj).then((objArray) => {
     console.log(objArray);
     items = objArray;
+    if (items.length == 0) {
+      res.redirect("/");
+    }
   });
-
-  if (items.length == 0) {
-    res.redirect("/");
-  }
 
   res.render("list", {
     listTitle: "Today",
@@ -161,6 +155,7 @@ app.post("/delete", async function (req, res) {
 });
 
 app.get("/:newList", async (req, res) => {
+  console.log("*******get request occuer in custom list");
   const cleanedInput = _.replace(req.params.newList, /[^A-Za-z]/g, "");
   const newListName = _.capitalize(cleanedInput);
 
@@ -191,6 +186,6 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.listen(3000, function () {
+app.listen(PORT, function () {
   console.log("Server started on port 3000");
 });
